@@ -9,7 +9,7 @@ public class Medico {
     private List<Departamento> departamentos = new ArrayList<>();
     private List<Intervencion> intervenciones = new ArrayList<>();
 
-    public Medico(String nombre, String dni) {
+    public Medico(String nombre, String dni, Departamento cardiologia) {
         this.nombre = nombre;
         this.dni = dni;
     }
