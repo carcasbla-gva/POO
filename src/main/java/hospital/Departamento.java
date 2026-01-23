@@ -11,7 +11,7 @@ public class Departamento {
     public Departamento(String nombre, Hospital hospital) {
         this.nombre = nombre;
         this.hospital = hospital;
-
+        this.hospital.getDepartamentos().add(this);
     }
 
     public String getNombre() {
@@ -33,7 +33,6 @@ public class Departamento {
 
     public void addMedicos(Medico medicos){
         this.medicos.add(medicos);
-        medicos.getDepartamentos().add(this);
     }
 
     @Override

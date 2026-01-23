@@ -7,12 +7,14 @@ public class Intervencion {
     private String nombre;
     private Medico medico;
     private Paciente paciente;
-    private List<Medicamento> medicamentos = new ArrayList<>();
+    private List<Prescribe> prescripciones = new ArrayList<>();
 
     public Intervencion(String nombre, Medico medico, Paciente paciente) {
         this.nombre = nombre;
         this.medico = medico;
+        this.medico.getIntervenciones().add(this);
         this.paciente = paciente;
+        this.paciente.getIntervenciones().add(this);
     }
 
     public String getNombre() {
@@ -39,16 +41,12 @@ public class Intervencion {
         this.paciente = paciente;
     }
 
-    public List<Medicamento> getMedicamentos() {
-        return medicamentos;
+    public List<Prescribe> getPrescripciones() {
+        return prescripciones;
     }
 
-    public void setMedicamentos(List<Medicamento> medicamentos) {
-        this.medicamentos = medicamentos;
-    }
-
-    public void addMedicamentos(Medicamento medicamentos){
-        this.medicamentos.add(medicamentos);
+    public void setPrescripciones(List<Prescribe> prescripciones) {
+        this.prescripciones = prescripciones;
     }
 
     @Override

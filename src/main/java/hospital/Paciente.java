@@ -13,6 +13,7 @@ public class Paciente {
         this.nombre = nombre;
         this.dni = dni;
         this.habitacion = habitacion;
+        this.habitacion.getPacientes().add(this);
     }
 
     public String getNombre() {

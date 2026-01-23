@@ -9,5 +9,6 @@ public class MainHospital {
         Paciente oscar = new Paciente("Oscar", "2002151", sur);
         Intervencion cancer = new Intervencion("cancer", jordi, oscar);
         Medicamento ibuprofeno = new Medicamento("Ibuprofeno");
+        Prescribe dosVeces = new Prescribe(ibuprofeno, cancer, "dos veces");
     }
 }
