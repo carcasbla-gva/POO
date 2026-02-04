@@ -7,7 +7,7 @@ public class Parafarmacia extends Producto{
 
     //herencia
     public Parafarmacia(int id,String nombre, String fabricante, double precio, int stock ) {
-        super(id,nombre, fabricante, precio, stock,);
+        super(id,nombre, fabricante, precio, stock);
     }
 
     //constructor

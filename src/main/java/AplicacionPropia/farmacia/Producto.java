@@ -14,13 +14,14 @@ abstract public class Producto {
 
     // constructor
     public Producto(String nombre) {
+        this.nombre = nombre;
+    }
+    public Producto(int id, String nombre, String fabricante, double precio, int stock) {
         this.id = id;
         this.nombre = nombre;
         this.fabricante = fabricante;
         this.precio = precio;
         this.stock = stock;
-        this.laboratorio = laboratorio;
-        this.laboratorio.addProductos(this);
     }
 
     // getters y setters
