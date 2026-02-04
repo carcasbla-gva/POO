@@ -9,7 +9,7 @@ public class Medicamento extends Producto{
 
     // herencia
     public Medicamento(int id, String nombre, String fabricante, double precio, int stock ) {
-        super(id,nombre, fabricante, precio, stock);
+        super(id,nombre, fabricante, precio, stock,);
     }
     // constructor
     public Medicamento(String nombre, String principioActivo, String composicion, boolean requiereReceta, String prestacion, Receta receta) {
