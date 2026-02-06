@@ -53,7 +53,12 @@ public class Venta {
     }
 
     public void addVentas(DetalleDeVenta ventas){
-        this.ventas.add(ventas);
+        if (ventas.getCantidad() > 0)
+            this.ventas.add(ventas);
+    }
+
+    public void setVentas(List<DetalleDeVenta> ventas) {
+        this.ventas = ventas;
     }
 
     @Override
