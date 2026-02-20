@@ -1,9 +1,19 @@
-public class MainAireAcondicionado{
+import javax.swing.plaf.PanelUI;
+
+public class MainAireAcondicionado {
     public static void main(String[] args) {
         AireAcondicionado aa = new AireAcondicionado("AC", 30, 10, 25);
+        System.out.println(aa);
+        aa.setTemperatura(11);
+        System.out.println(aa);
+        aa.bajar();
+        System.out.println(aa);
+        aa.bajar();
+        System.out.println(aa);
+
     }
 }
-class AireAcondicionado {
+class AireAcondicionado{
     String nombre;
     int maxima;
     int minima;
@@ -28,31 +38,33 @@ class AireAcondicionado {
         return maxima;
     }
 
-
     public int getMinima() {
         return minima;
     }
-
-
     public int getTemperatura() {
         return temperatura;
     }
 
     public void setTemperatura(int temperatura) {
         if (temperatura <= maxima && temperatura >= minima)
-        this.temperatura = temperatura;
+            this.temperatura = temperatura;
+        else
+            this.temperatura = maxima;
     }
 
     public void subir(){
-        if (!(temperatura + 1 <= maxima))
-            this.temperatura++;
+        if (!(temperatura + 1 > maxima))
+            temperatura++;
     }
+
     public void bajar(){
         if (!(temperatura - 1 < minima))
-            this.temperatura--;
+            temperatura--;
     }
+
     @Override
     public String toString(){
         return "" + this.temperatura;
     }
+
 }
