@@ -14,9 +14,11 @@ public abstract class Animal {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public void comunicarse(){
         System.out.println("Mi nombre es " + nombre);
     }
+
     public abstract void respirar();
 
     public abstract void moverse();
